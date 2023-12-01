@@ -32,9 +32,16 @@ public void draw()
   for(int i = 0; i < stars.length; i++){
     stars[i].show();
   }
-  for(int i = 0; i < 10; i++){
+  for(int i = 0; i < yap.size(); i++){
     yap.get(i).show();
     yap.get(i).move();
+  }
+  for(int i = 0; i < yap.size(); i++){
+    float d = dist(yap.get(i).getMyCenterX(), yap.get(i).getMyCenterY(),
+                    jit.getMyCenterX(),jit.getMyCenterY());
+    if(d < 20){
+      yap.remove(i);
+    }
   }
 }
 public void keyPressed(){
