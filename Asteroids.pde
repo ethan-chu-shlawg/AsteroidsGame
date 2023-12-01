@@ -1,7 +1,7 @@
 class Asteroids extends Floater{
   private int rotSpeed;
   public Asteroids(){
-    rotSpeed = (int)(Math.random()*2+1);
+    rotSpeed = (int)(Math.random()*3-3);
     corners = 6; 
     xCorners = new int[corners];
     yCorners = new int[corners];
@@ -27,5 +27,11 @@ class Asteroids extends Floater{
   public void move(){
     turn(rotSpeed);
     super.move();
+  }
+  public float getMyCenterX(){
+    return myCenterX;
+  }
+  public float getMyCenterY(){
+    return myCenterY;
   }
 }
