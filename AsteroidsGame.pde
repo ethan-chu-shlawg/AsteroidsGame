@@ -17,7 +17,7 @@ public void setup()
   jit = new Spaceship();
   yip = new ArrayList <Bullet>();
   yap = new ArrayList<Asteroids>();
-  for(int i = 0; i < 400; i++)
+  for(int i = 0; i < 50; i++)
     yap.add(new Asteroids());
 }
 public void draw() 
